@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    background-color: hsl(0, 0%, 100%);
+    background-image: url(/Main/images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+}
+/* not very sure of this is the right way to add my background images though */
+.container {
+    width: 1440px;
+    background-image: url(/Main/images/bg-pattern-bottom-desktop.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+/* seems this properties here is affecting my arangement when making this page responsive.
+the top part of my container just refused to allingn properly with the bottom part */
+.product_desc_ratings {
+    display: flex;
+    padding-top: 5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.desc {
+    width: 22rem;
+    line-height: 1.3rem;
+}
+
+.main_head {
+    line-height: 3rem;
+}
+
+.dark_text {
+    color: hsl(300, 43%, 22%);
+}
+
+#light_text {
+    color: hsl(303, 10%, 53%);
+    margin-top: 1rem;
+}
+
+.white_text {
+    color: hsl(0, 0%, 100%);
+}
+
+.ratings {
+    padding-left: 21rem;
+}
+
+.review,.report_guru,.BestTech {
+    background-color: hsl(300, 24%, 96%);
+    padding: 0.7rem;
+    padding-left: 1.5rem;
+    border-radius: 0.5rem;
+    width: 23rem;
+    margin: 1rem;
+}
+
+.report_guru {
+    margin-left: 4rem;
+}
+
+.BestTech {
+    margin-left: 7rem;
+}
+
+.last_star {
+    padding-right: 1.5rem;
+}
+
+.product_buyers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.colton, .irene, .anne {
+    width: 20rem;
+    height: 12rem;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    padding: 1.7rem;
+}
+
+.irene {
+    margin-top: 4rem;
+}
+
+.anne {
+    margin-top: 5rem;
+}
+
+.pic_head {
+    display: flex;
+    gap: 1rem;
+}
+
+.client_photo {
+    width: 3rem;
+    border-radius: 7rem;
+}
+
+.buyer_details {
+    padding-top: 0.3rem;
+}
+
+.opinion {
+    margin-top: 1rem;
+    line-height: 1.2rem;
+}
+
+h4 {
+    color: hsl(333, 80%, 67%);
+    font-weight: lighter;
+    margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(/Main/images/bg-pattern-top-mobile.svg);
+        max-width: 375px;
+        margin: auto;
+        /* justify-content: center; */
+    }
+    
+    .container {
+        background-image: url(/Main/images/bg-pattern-bottom-mobile.svg);
+        background-position: bottom;
+        width: 375px;
+        margin: auto;
+    }
+
+    .product_desc_ratings {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 50px;
+        text-align: center;
+        margin: auto;
+        padding-left: 0%;
+    }
+
+    .product_buyers {
+        display: grid;      
+        grid-template-columns: 1fr;
+        margin: auto;
+        width: 100%;
+    }
+
+    .ratings {
+        padding-left: 0%;
+        margin-top: 1rem;
+        /* width: 100%; */
+    }
+
+    .review,.report_guru,.BestTech {
+        width: 100%;
+        margin-left: 0%;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* margin: auto; */
+    }
+}
